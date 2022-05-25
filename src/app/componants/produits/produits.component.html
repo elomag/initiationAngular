@@ -1,0 +1,109 @@
+<div class="container-fluid"
+  style="background-image: url('http://stileex.xyz/wp-content/uploads/2019/01/image-a-telecharger-gratuitement.jpg'); ">
+  <p class="text-light">Quelques produits disponibles dans cette boutique. D'autres à venir en fonction de la demande.
+  </p>
+
+  <section class="row">
+    <div *ngIf="modifNotif" class="btn btn-success m-3 p-3">
+      <p>Le produit a bien été modifié</p>
+    </div>
+    <div class="card col-4 bg-transparent text-light" *ngFor="let produit of produits">
+      <img src="{{produit.image}}" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{produit.title}}</h5>
+        <p class="card-text bg-light text-secondary px-3">{{produit.description}}</p>
+        <div>
+          <p class="btn text-bg-secondary">{{produit.price}} &euro;</p>
+        </div>
+        <!-- -------------------bouton pour methode UPDATE---------------------------- -->
+        <!----------------------- Button open modal -------------------------------------->
+        <button type="button" class="btn text-bg-warning me-5" data-bs-toggle="modal" data-bs-target="#exampleModal"
+          (click)="recupProduit(produit)">
+          <i class="fa-solid fa-pen"></i>
+        </button>
+        <!-- -------------------bouton pour methode DELETE par id---------------------------- -->
+        <button class="btn text-bg-danger " (click)="delete(produit.id)"><i class="fa-solid fa-trash-can"></i></button>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade text-dark" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">update {{produitUpdate.title}} </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ">
+              <!-- formulaire update -->
+              <form>
+                <div class="mb-3">
+                  <label class="form-label">Titre</label>
+                  <input type="text" name="title" class="form-control" [(ngModel)]="produitUpdate.title" required>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Description</label>
+                  <input type="text" name="description" class="form-control" [(ngModel)]="produitUpdate.description"
+                    required>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Image</label>
+                  <input type="text" name="image" class="form-control" [(ngModel)]="produitUpdate.image" required>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label">Prix</label>
+                  <input type="number" name="price" class="form-control" [(ngModel)]="produitUpdate.price" required>
+                </div>
+
+                <button (click)="updateProd()" type="submit" class="btn btn-primary" data-bs-dismiss="modal">Enregistrer le
+                  produit</button>
+              </form>
+              <!-- fin du formulaire -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="fermerPopup()"
+                data-bs-dismiss="modal">Fermer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Fin modal -->
+    </div>
+
+  </section>
+</div>
+
+
+
+<!-- <div class="card col-4 bg-transparent text-light">
+    <img src="https://image.vevor.com/fr%2FSG10C11YKLGPBK001V0%2Fgoods_img-v1%2Fsteel-tongue-drum-m100-1.2.jpg" class="card-img-top">
+    <div class="card-body">
+        <h5 class="card-title">Handpan Tambour Langue Tongue Drum 11 Notes</h5>
+        <p class="card-text bg-light text-secondary p-3">MATÉRIAU DE HAUTE QUALITÉ - TAMBOUR 25 CM 11 TONS - FACILE À APPRENDRE & À JOUER - PIEDS EN SILICONE FIXES - APPLICATION LARGE - Ce tambour de guérison sonore avec une voix éthérée et des notes pures et apaisantes peut purifier votre esprit, calmer votre cœur et convenir à la méditation personnelle, à la pratique du yoga, au zen et à l'éducation musicale, etc.</p>
+        <a href="#" class="btn text-bg-secondary">Voir le détail</a>
+      </div>
+    </div>
+  
+    <div class="card col-4 bg-transparent text-light">
+      <img src="https://cdn.manomano.com/portable-handpan-pan-main-drum-c-key-6-notes-a3-c4-d4-e4-f4-g4-instrument-de-percussion-avec-sac-de-transport-pour-debutants-brun-P-6333895-40459919_1.jpg" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">Portable Handpan Pan Main Drum C-Key 6 Notes</h5>
+        <p class="card-text bg-light text-secondary px-3">Instrument de percussion avec sac de transport pour debutants, brun. Instrument de musique de la classe des idiophones. Il est construit à partir de deux demi-coques d'emboutissage profond, à l'intérieur creux et en forme de lentille convexe. Le côté supérieur (Ding) a une «note» centrale martelée dedans et plusieurs «champs de ton» martelés autour du centre. Le fond (Gu) est une surface lisse qui a un trou roulé au centre avec une note accordée qui peut être créée lorsque la jante est frappée. Les débutants même peuvent jouer de la musique mélodieuse avec ce tambour.</p>
+        <a href="#" class="btn text-bg-secondary">Voir le détail</a>
+      </div>
+    </div>
+  
+    <div class="card col-4 bg-transparent text-light">
+      <img src="https://m.media-amazon.com/images/I/71gOkQQqBIL._AC_SX679_.jpg" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">YUANZHOU Handpan Tongue Drum 9 Notes</h5>
+        <p class="card-text bg-light text-secondary p-3">Tambour en acier de 18 Pouces à 9 tons différents, adapté à la méditation, aux exercices de Yoga, au Zazen, aux Musicothérapeutes, etc.
+        Aucun fond musical n'est requis. Ses sons éthérés peuvent purifier votre esprit et votre âme et atteindre la paix intérieure.
+        Facile à jouer, vous pouvez simplement utiliser les baguettes incluses ou vos mains。
+        Matériau: Acier Inoxydable de Haute Qualité, Surface lisse, Résistant à l'usure et à la lumière.
+        Avec étui de transport pour faciliter les déplacements. </p>
+        <a href="#" class="btn text-bg-secondary">Voir le détail</a>
+      </div>
+    </div> -->

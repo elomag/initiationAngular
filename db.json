@@ -1,0 +1,39 @@
+{
+  "produits": [
+    {
+      "id": 1,
+      "title": "pitaya test3",
+      "image": "https://th.bing.com/th/id/OIP.OfkOuY1iK-FayenX3YPIfAHaE7?pid=ImgDet&rs=1",
+      "description": "La pitaya est un fruit planté en Asie du sud-est et en Amérique. C’est un fruit tropical issu du cactus et qui se mange toute l’année. Elle offre en outre des couleurs vives sur le marché. Généralement consommée cru, ce fruit apporte fraîcheur et goût très délicieux.",
+      "price": 472
+    },
+    {
+      "id": 2,
+      "title": "banane rose",
+      "image": "https://www.papillesetpupilles.fr/wp-content/uploads/2012/11/Bananes-roses-%C2%A9Mikell-Blain-Rogers-shutterstock.jpg",
+      "description": "La banane rose est très appréciée dans beaucoup de régions du monde grâce à sa belle couleur et le goût délicieux avec un léger saveur framboise. Sa pulpe est blanche, crémeuse à des nuances rosées ou orangées. La banane rose est plus petite et plus douce que la banane Cavendish. On peut consommer la banane rose quand sa peau devient marron-rougeâtre presque pourpre. Je n’en avais jamais vue avant d’observer celles ci au salon de l’agriculture.",
+      "price": 23
+    },
+    {
+      "id": 3,
+      "title": "litchi",
+      "image": "https://www.lesfruitsetlegumesfrais.com/app/uploads/cache/2021/03/litchi/2145143524.jpg",
+      "description": "Le litchi est le fruit du Litchi chinensis, un arbre tropical originaire du sud de la Chine de 5 à 10 m et pouvant dépasser 15 m. Très sensible au manque d’eau, il a besoin d’un environnement humide, surtout en période de croissance.",
+      "price": 666
+    },
+    {
+      "title": "kumkat",
+      "description": "Les kumquats sont un autre fruit exotique de la famille des agrumes avec tant d’avantages pour la santé humaine que vous devriez savoir. Parmi les autres agrumes, les kumquats sont probablement les moins populaires, mais ne prenez pas la petite taille des kumquats pour acquise, car ce fruit regorge de nombreux nutriments comme les vitamines et les minéraux. C’est pourquoi les kumquats méritent plus d’attention car ce petit agrume est non seulement unique en apparence qui est de forme ovale, mais aussi unique dans la façon dont vous le consommez, c’est-à-dire que toutes les parties du fruit du kumquats sont comestibles, y compris la peau. Contrairement aux autres types de fruits de la famille des agrumes dont le goût de la peau est intolérablement amer, le goût de la peau des kumquats est étonnamment sucré et assez agréable à manger.",
+      "image": "https://storage.googleapis.com/drhealthbenefits/2017/05/Health-Benefits-of-Kumquats.jpg",
+      "price": 78,
+      "id": 4
+    },
+    {
+      "title": "kumkat test",
+      "description": "Les kumquats sont un autre fruit exotique de la famille des agrumes avec tant d’avantages pour la santé humaine que vous devriez savoir. Parmi les autres agrumes, les kumquats sont probablement les moins populaires, mais ne prenez pas la petite taille des kumquats pour acquise, car ce fruit regorge de nombreux nutriments comme les vitamines et les minéraux. C’est pourquoi les kumquats méritent plus d’attention car ce petit agrume est non seulement unique en apparence qui est de forme ovale, mais aussi unique dans la façon dont vous le consommez, c’est-à-dire que toutes les parties du fruit du kumquats sont comestibles, y compris la peau. Contrairement aux autres types de fruits de la famille des agrumes dont le goût de la peau est intolérablement amer, le goût de la peau des kumquats est étonnamment sucré et assez agréable à manger.",
+      "image": "https://storage.googleapis.com/drhealthbenefits/2017/05/Health-Benefits-of-Kumquats.jpg",
+      "price": 36,
+      "id": 5
+    }
+  ]
+}
